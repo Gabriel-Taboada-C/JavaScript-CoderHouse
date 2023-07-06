@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Virtual</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Formulario Login -->
+    <section class="login_popup">
+      <div class="box">
+        <form action="" id="form">
+          <div class="form">
+            <h1 class="btnLogin">Loguearse</h1>
+
+            <div class="grupo">
+              <input type="email" id="email" required /><span
+                class="barra"
+              ></span>
+              <label for="">Email</label>
+            </div>
+            <div class="grupo">
+              <input type="password" id="password" /><span class="barra"></span>
+              <label for="">Contraseña</label>
+            </div>
+
+            <button type="button" class="btn_popup" onclick="login()">
+              Ingresar
+            </button>
+            <p class="warnings" id="warning"></p>
+          </div>
+        </form>
+        <button onclick="closeLoginFlex()" class="btn_popup">X</button>
+      </div>
+    </section>
+    <!-- Formulario Register -->
+    <section class="register_popup">
+      <div class="box">
+        <form action="" id="formRegister">
+          <div class="form">
+            <h1>Registrarse</h1>
+            <div class="grupo">
+              <input type="text" id="txtName" required /><span
+                class="barra"
+              ></span>
+              <label for="">Nombre</label>
+            </div>
+            <div class="grupo">
+              <input type="text" id="txtLastName" required /><span
+                class="barra"
+              ></span>
+              <label for="">Apellido</label>
+            </div>
+            <div class="grupo">
+              <input type="email" id="txtEmail" required /><span
+                class="barra"
+              ></span>
+              <label for="">Email</label>
+            </div>
+            <div class="grupo">
+              <input type="password" id="txtPassword" /><span
+                class="barra"
+              ></span>
+              <label for="">Contraseña</label>
+            </div>
+
+            <button
+              type="submit"
+              class="btn_popup"
+              id="addUsuario"
+              onclick="suscribirse()"
+            >
+              Suscribirse
+            </button>
+            <p class="warnings" id="warnings"></p>
+          </div>
+        </form>
+        <button onclick="closeRegister()" class="btn_popup">X</button>
+      </div>
+    </section>
+
+    <div class="grid">
+      <div class="grid_container1">
+        <div class="title">
+          <h1 id="title">Bienvenidos a Simple Calculator</h1>
+        </div>
+        <div class="login">
+          <button
+            id="btn_login"
+            onclick="openLogin(), logout()"
+            class="btn_login"
+          >
+            Login
+          </button>
+          <button
+            id="btn_login btn_registrarse"
+            onclick="openRegister()"
+            class="btn_login btn_registrarse"
+          >
+            Registrarse
+          </button>
+        </div>
+      </div>
+      <div class="grid_container2">
+        <p class="msj" id="descripcion">
+          En esta calculadora online podrás hacer operaciones básicas y ver la
+          tabla de un número a elección. Las operaciones realizadas por el
+          usuario quedaran almacenadas en el historial y podrán verse en el
+          mismo; por ello recomendamos Loguearse a nuestro sistema para poder
+          guardar lo realizado y verlo posteriormente.
+        </p>
+      </div>
+      <div class="grid_container3">
+        <h2 id="saludo">Bienvenido usuario anónimo</h2>
+      </div>
+      <div class="grid_container4">
+        <div class="fila1">
+          <input type="text" id="pantalla" />
+        </div>
+        <div class="box_btn">
+          <div class="fila_hidden1">
+            <button class="btn btn_2nd btn_hidden" onclick="openBtn()">
+              2nd
+            </button>
+            <button class="btn btn_deg btn_hidden" onclick="radianes()">
+              deg
+            </button>
+            <button class="btn btn_sen btn_hidden" onclick="seno()">sen</button>
+            <button class="btn btn_cos btn_hidden" onclick="coseno()">
+              cos
+            </button>
+            <button class="btn btn_tan btn_hidden" onclick="tangente()">
+              tan
+            </button>
+          </div>
+          <div class="fila_hidden2">
+            <button class="btn btn_potencia btn_hidden" onclick="potencia()">
+              x^2
+            </button>
+            <button class="btn btn_log btn_hidden" onclick="logaritmoNatural()">
+              lg
+            </button>
+            <button class="btn btn_ln btn_hidden" onclick="logaritmo()">
+              Ln
+            </button>
+            <button
+              class="btn btn_parDer btn_hidden"
+              onclick="ingresarValor('(')"
+            >
+              (
+            </button>
+            <button
+              class="btn btn_parIzq btn_hidden"
+              onclick="ingresarValor(')')"
+            >
+              )
+            </button>
+          </div>
+          <div class="fila2">
+            <button class="btn btn_raiz btn_hidden" onclick="raiz()">√x</button>
+            <button class="btn btn_limpiar" onclick="limpiar()">AC</button>
+            <button class="btn btn_borrar" onclick="borrar()">Del</button>
+            <button class="btn btn_division" onclick="ingresarValor('/')">
+              /
+            </button>
+            <button class="btn btn_porcentaje" onclick="porcentaje(100)">
+              %
+            </button>
+          </div>
+          <div class="fila3">
+            <button class="btn btn_serie btn_hidden" onclick="factorial()">
+              x!
+            </button>
+            <button class="btn btn_uno" onclick="ingresarValor(1)">1</button>
+            <button class="btn btn_dos" onclick="ingresarValor(2)">2</button>
+            <button class="btn btn_tres" onclick="ingresarValor(3)">3</button>
+            <button class="btn btn_multiplicacion" onclick="ingresarValor('*')">
+              *
+            </button>
+          </div>
+          <div class="fila4">
+            <button class="btn btn_fraccion btn_hidden" onclick="fraccion()">
+              1/x
+            </button>
+            <button class="btn btn_cuatro" onclick="ingresarValor(4)">4</button>
+            <button class="btn btn_cinco" onclick="ingresarValor(5)">5</button>
+            <button class="btn btn_seis" onclick="ingresarValor(6)">6</button>
+            <button class="btn btn_resta" onclick="ingresarValor('-')">
+              -
+            </button>
+          </div>
+          <div class="fila5">
+            <button
+              class="btn btn_pi btn_hidden"
+              onclick="ingresarValor(Math.PI)"
+            >
+              π
+            </button>
+            <button class="btn btn_siete" onclick="ingresarValor(7)">7</button>
+            <button class="btn btn_ocho" onclick="ingresarValor(8)">8</button>
+            <button class="btn btn_nueve" onclick="ingresarValor(9)">9</button>
+            <button class="btn btn_suma" onclick="ingresarValor('+')">+</button>
+          </div>
+          <div class="fila6">
+            <button
+              class="btn btn_euler btn_hidden"
+              onclick="ingresarValor(Math.E)"
+            >
+              e
+            </button>
+            <button class="btn btn_tabla" onclick="tabla(num)">Tbl</button>
+            <button class="btn btn_cero" onclick="ingresarValor(0)">0</button>
+            <button class="btn btn_punto" onclick="ingresarValor('.')">
+              .
+            </button>
+            <button class="btn btn_igual" id="btn_igual" onclick="resolver()">
+              =
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="grid_container5">
+        <h2>Historial de Operaciones</h2>
+        <table class="operaciones" id="operaciones">
+          <thead>
+            <tr>
+              <th>Operación</th>
+              <th>Resultado</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="grid_container6">
+        <button class="btn" id="btn_historial" onclick="openHistorial()">
+          Abrir Historial
+        </button>
+        <button class="btn" id="btn_cientifica" onclick="openScience()">
+          Calculadora Científica
+        </button>
+      </div>
+    </div>
+    <script src="eventos.js"></script>
+    <!-- <script src="codigo_fuente.js"></script> -->
+  </body>
+</html>

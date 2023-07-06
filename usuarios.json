@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Pepe",
+    "lastName": "Pérez",
+    "email": "pepe@gmail.com",
+    "password": "1234",
+    "operaciones": [
+      {
+        "operacion": "2+2",
+        "resultado": "4"
+      },
+      {
+        "operacion": "2*8",
+        "resultado": "16"
+      },
+      {
+        "operacion": "6/3",
+        "resultado": "2"
+      }
+    ]
+  },
+  {
+    "name": "Juan",
+    "lastName": "González",
+    "email": "juan@gmail.com",
+    "password": "5678",
+    "operaciones": [
+      {
+        "operacion": "10-5",
+        "resultado": "5"
+      },
+      {
+        "operacion": "3^2",
+        "resultado": "9"
+      },
+      {
+        "operacion": "7*4",
+        "resultado": "28"
+      },
+      {
+        "operacion": "15/3",
+        "resultado": "5"
+      }
+    ]
+  },
+  {
+    "name": "María",
+    "lastName": "López",
+    "email": "maria@gmail.com",
+    "password": "abcd",
+    "operaciones": [
+      {
+        "operacion": "7/2",
+        "resultado": "3.5"
+      },
+      {
+        "operacion": "4+6",
+        "resultado": "10"
+      },
+      {
+        "operacion": "5-3",
+        "resultado": "2"
+      },
+      {
+        "operacion": "9*4",
+        "resultado": "36"
+      },
+      {
+        "operacion": "8^2",
+        "resultado": "64"
+      }
+    ]
+  },
+  {
+    "name": "Luis",
+    "lastName": "Rodríguez",
+    "email": "luis@gmail.com",
+    "password": "qwerty",
+    "operaciones": [
+      {
+        "operacion": "5*5",
+        "resultado": "25"
+      },
+      {
+        "operacion": "10/2",
+        "resultado": "5"
+      }
+    ]
+  },
+  {
+    "name": "Ana",
+    "lastName": "Martínez",
+    "email": "ana@gmail.com",
+    "password": "9876",
+    "operaciones": [
+      {
+        "operacion": "3+7",
+        "resultado": "10"
+      },
+      {
+        "operacion": "4^2",
+        "resultado": "16"
+      },
+      {
+        "operacion": "9-5",
+        "resultado": "4"
+      }
+    ]
+  },
+  {
+    "name": "Carlos",
+    "lastName": "Sánchez",
+    "email": "carlos@gmail.com",
+    "password": "zxcvb",
+    "operaciones": [
+      {
+        "operacion": "8-3",
+        "resultado": "5"
+      },
+      {
+        "operacion": "6*9",
+        "resultado": "54"
+      },
+      {
+        "operacion": "10/5",
+        "resultado": "2"
+      }
+    ]
+  }
+]
